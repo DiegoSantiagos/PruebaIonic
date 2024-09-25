@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 interface Asignatura {
-  id: number;
   nombre: string;
   siglas: string;
 }
@@ -14,9 +13,8 @@ interface Asignatura {
 })
 export class MisAsignaturaPage implements OnInit {
   asignaturas: Asignatura[] = [
-    { id: 1, nombre: 'Matemáticas', siglas: 'mdi112' },
-    { id: 2, nombre: 'Ciencias', siglas: 'sci233' },
-    // Agrega más asignaturas según sea necesario
+    { nombre: 'Matemáticas', siglas: 'mdi112' },
+    { nombre: 'Ciencias', siglas: 'sci233' },
   ];
 
   constructor(private router: Router) { }

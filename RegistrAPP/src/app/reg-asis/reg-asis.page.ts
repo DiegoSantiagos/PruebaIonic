@@ -12,4 +12,6 @@ export class RegAsisPage implements OnInit {
   ngOnInit() {
   }
 
+
+
 }

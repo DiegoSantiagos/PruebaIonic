@@ -1,13 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>misAsis</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis asistencias</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">misAsis</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-text-center">
+  <ng-container *ngFor="let asignatura of asignaturas">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ asignatura.nombre }}</ion-card-title>
+        {{ asignatura.siglas }}
+      </ion-card-header>
+      <ion-card-content>
+        {{asignatura.asistencia}} / {{asignatura.totalClases}}
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
 </ion-content>
